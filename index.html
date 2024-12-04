@@ -8,16 +8,11 @@
 <body>
     <h1>WebAssembly with Rust</h1>
     <script type="module">
-        import init from './pkg/wasm_module.js';
+        import init, { moo } from './pkg/wasm_module.js';
 
         async function run() {
-            // Initialize the WASM module
             await init();
-
-            // Access the `moo` function from the WASM module
-            const result = window.moo(); // calling it via the global window object
-
-            // Log the result to the console
+            const result = moo();
             console.log(result);
         }
 
