@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WASM Example</title>
+</head>
+<body>
+    <h1>WebAssembly with Rust</h1>
+    <script type="module">
+        import init, { moo } from './pkg/wasm_module.js';
+
+        async function run() {
+            // Initialize the WASM module
+            await init();
+
+            // Call the `moo` function from WASM
+            const result = moo();
+
+            // Log the result to the console
+            console.log(result);
+        }
+
+        run();
+    </script>
+</body>
+</html>
