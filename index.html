@@ -11,7 +11,7 @@
         import init, { moo } from './pkg/wasm_module.js';
 
         async function run() {
-            await init();
+            const wasm = await init();
             const result = moo();
             console.log(result);
         }
