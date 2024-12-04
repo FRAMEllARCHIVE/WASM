@@ -28,9 +28,11 @@ with open("Cargo.toml", "w") as f:
 lib_rs = '''use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-pub fn get_access_token() -> String {
-    "ACCESS_TOKEN".to_string()
+pub fn moo() -> String { 
+    let merpmerp: &str = "Z2hwX2Q0Q";
+    joojooo
 }
+
 '''
 
 os.makedirs("src", exist_ok=True)
